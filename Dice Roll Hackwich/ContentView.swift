@@ -12,11 +12,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Dice Roll")
-            Text("\(randomValue)").font(.system(size: 72))
-                .padding()
+            Image("pips \(randomValue)")
+                            .resizable()
+                            .frame(width: 200, height: 200, alignment: .center)
                 .onTapGesture {
                     randomValue = Int.random(in: 1...6)
-                    
                 }
             Spacer()
         }
